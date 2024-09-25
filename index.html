@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Find the Stag Game</title>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+      integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/phaser/3.85.1/phaser.min.js"
+      integrity="sha512-jK+/XscTjPKeRjMChXdeN2kHLBRflR0XHVLpgPpRfglv+IM6ACYjji+hcpfdG1Iw6/MOD6FOIwc4MvMpv3Tpsw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div id="hidesection">
+    <div id="navbar">
+      <div id="time-container">
+        <span class="label">⏱️ TIME</span>
+        <span id="time">45</span>
+      </div>
+      <div id="stags-container">
+        <div class="label">STAGS FOUND</div>
+        <div id="stag-icons">
+          <img
+            src="/assets/Stag1.png"
+            alt="Stag 1"
+            class="stag-icon"
+            id="stag-icon-1"
+          />
+          <img
+            src="/assets/Stag1.png"
+            alt="Stag 2"
+            class="stag-icon"
+            id="stag-icon-2"
+          />
+          <img
+            src="/assets/Stag1.png"
+            alt="Stag 3"
+            class="stag-icon"
+            id="stag-icon-3"
+          />
+          <img
+            src="/assets/Stag1.png"
+            alt="Stag 4"
+            class="stag-icon"
+            id="stag-icon-4"
+          />
+          <img
+            src="/assets/Stag1.png"
+            alt="Stag 5"
+            class="stag-icon"
+            id="stag-icon-5"
+          />
+        </div>
+      </div>
+    </div>
+    <div id="game-over-popup" class="popup">
+      <div class="popup-content">
+        <h2>Game Over</h2>
+        <p id="game-over-message">Time's up!</p>
+        <p id="final-score"></p>
+        <button id="restart-button">Restart</button>
+      </div>
+    </div>
+
+    <div id="game-win-popup" class="popup">
+      <div class="popup-content">
+        <h2>Congratulations!</h2>
+        <p>You found all the stags!</p>
+        <p id="final-score-win"></p>
+        <button id="restart-button-win">Restart</button>
+      </div>
+    </div>
+
+    <button id="fullscreen_button" class="fullscreen_button">
+      Go Fullscreen
+    </button>
+
+    <div id="game-container"></div>
+  </div>
+    <div id="orientation-overlay">
+      <img src="assets/rotate_your_phone.gif" alt="Rotate Device" />
+    </div>
+
+    <script type="module" src="/index.js"></script>
+  </body>
+</html>
